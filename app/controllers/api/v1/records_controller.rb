@@ -6,7 +6,7 @@ module Api
 
       # GET /records
       def index
-        @records = current_user.record.all
+        @records = current_user.records.all
 
         render json: @records
       end
@@ -21,7 +21,7 @@ module Api
         @record = current_user.records.build(record_params)
 
         if @record.save
-          render json: @record, status: :created, location: @record
+          render json: @record, status: :created
         else
           render json: @record.errors, status: :unprocessable_entity
         end
@@ -44,7 +44,7 @@ module Api
       private
         # Use callbacks to share common setup or constraints between actions.
         def set_record
-          @record = current_user.record.find(params[:id])
+          @record = current_user.records.find(params[:id])
         end
 
         # Only allow a trusted parameter "white list" through.
@@ -53,3 +53,4 @@ module Api
         end
     end
   end
+end
