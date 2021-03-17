@@ -1,39 +1,36 @@
 <template>
   <v-app id="app">
-    <v-app-bar app>
+    <v-app-bar app flat>
+      <h3>SPARKO</h3>
       <template v-if="!$vuetify.breakpoint.mobile" id="menu">
         <v-row 
-          align="center"
           justify="space-around"
         >
           <v-col
-            md="10"      
+            md="12"      
           > 
             <v-btn
               text
               color="grey darken-3"
-              flat
               class="float-right text-capitalize"
             >
-              Contato
+              <span class="title-bar">Contato</span>
             </v-btn>
 
             <v-btn
               text
               color="grey darken-3"
-              flat
               class="float-right text-capitalize"
             >
-              Parceiros
+              <span class="title-bar">Parceiros</span>
             </v-btn>
 
             <v-btn
               text
               color="grey darken-3"
-              flat
               class="float-right text-capitalize"
             >
-              Sobre
+              <span class="title-bar">Sobre</span>
             </v-btn>
           </v-col>
         </v-row>
@@ -60,5 +57,15 @@
 <style lang="scss">
 #app {
   background-color: #F6F6F6;
+}
+
+.title-bar {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 135%;
+
+  color: #616161;
 }
 </style>
