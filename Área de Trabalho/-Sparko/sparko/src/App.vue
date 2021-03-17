@@ -53,7 +53,11 @@
     </v-footer>
   </v-app>
 </template>
-
+<script>
+export default {
+  
+}
+</script>
 <style lang="scss">
 #app {
   background-color: #F6F6F6;

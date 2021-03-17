@@ -1,38 +1,43 @@
 <template>
-  <v-container>
-    <v-row>
-      <!-- Title Content -->
-      <v-col
-        cols="12"
-        subtitle-1
-        md="6"
-        order="2"
-        order-md="1"
-      >
-        <div class="app-title">
-          <h1 class="title">Sparko sua melhor escolha sempre.</h1>
-          <span class="span">Garantia de segurança em qualquer situação.</span>
-          <v-btn color="blue darken-2" dark class="app-button">Saiba Mais</v-btn>
-        </div>
-      </v-col>
-      <v-col 
-        cols="12"
-        md="6"
-        order="1"
-        order-md="1"
-      >
-        <v-img
-          max-height="700"
-          max-width="700"
-          src="../assets/Player.svg"
-        ></v-img>
-      </v-col>
-    </v-row>
-  </v-container>
+  <div>
+    <v-container style="height: 100vh;">
+      <v-row>
+        <!-- Title Content -->
+        <v-col
+          cols="12"
+          subtitle-1
+          md="6"
+          order="2"
+          order-md="1"
+        >
+          <div class="app-title">
+            <h1 class="title">Sparko sua melhor escolha sempre.</h1><br/>
+            <span class="span">Garantia de segurança em qualquer situação.</span>
+            <v-btn color="blue darken-2" dark class="app-button">Saiba Mais</v-btn>
+          </div>
+        </v-col>
+        <v-col 
+          cols="12"
+          md="6"
+          order="1"
+          order-md="1"
+        >
+          <v-img
+            max-height="700"
+            max-width="700"
+            src="../assets/Player.svg"
+          ></v-img>
+        </v-col>
+      </v-row>
+    </v-container>
+  <About/>
+  </div>
 </template>
 
 <script>
+import About from './About'
 export default {
+  components: { About },
   data: () => ({
     
   }),
@@ -58,12 +63,6 @@ export default {
 }
 
 .span {
-  position: absolute;
-  width: 356px;
-  height: 72px;
-  left: 0px;
-  top: 100px;
-
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: normal;
