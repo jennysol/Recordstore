@@ -2,7 +2,7 @@
   <div>
     <v-container style="height: 100vh;">
       <v-row>
-        <!-- Title Content -->
+        <!-- Title Container -->
         <v-col
           cols="12"
           subtitle-1
@@ -10,12 +10,20 @@
           order="2"
           order-md="1"
         >
-          <div class="app-title">
-            <h1 class="title">Sparko sua melhor escolha sempre.</h1><br/>
-            <span class="span">Garantia de segurança em qualquer situação.</span>
-            <v-btn color="blue darken-2" dark class="app-button">Saiba Mais</v-btn>
-          </div>
+          <transition
+            appear
+            name="slide-fade"
+            transition="slide-x-transition"
+          >
+
+            <div class="app-title">
+              <h1 class="title">Sparko sua melhor escolha sempre.</h1><br/>
+              <span class="span">Garantia de segurança em qualquer situação.</span>
+              <v-btn color="blue darken-2" dark class="app-button">Saiba Mais</v-btn>
+            </div>
+         </transition>
         </v-col>
+        <!-- Image Container  -->
         <v-col 
           cols="12"
           md="6"
@@ -26,18 +34,33 @@
             max-height="700"
             max-width="700"
             src="../assets/Player.svg"
-          ></v-img>
+          >
+          </v-img>
         </v-col>
       </v-row>
     </v-container>
-  <About/>
+    <About/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+     <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <Specifications/>
   </div>
 </template>
 
 <script>
 import About from './About'
+import Specifications from './Specifications'
 export default {
-  components: { About },
+  components: { About,  Specifications },
   data: () => ({
     
   }),
@@ -83,5 +106,20 @@ export default {
   margin: 64px 0px;
   margin-top: 160px;
 }
+
+.slide-fade-enter-active, .slide-fade-reverse-enter-active {
+  transition: all 1.8s ease;
+}
+
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+.slide-fade-reverse-enter, .slide-fade-reverse-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
 </style>>
 

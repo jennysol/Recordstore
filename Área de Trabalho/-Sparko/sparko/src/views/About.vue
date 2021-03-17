@@ -1,6 +1,6 @@
 <template>
   <div class="app-color">
-     <v-row>
+    <v-row>
       <!-- Title Content -->
       <v-col
         cols="12"
@@ -11,6 +11,7 @@
       >
         <v-img
           max-height="600"
+          transition="slide-y-transition"
           max-width="400"
           src="../assets/desktop.svg"
           class="float-image-left"
@@ -28,6 +29,7 @@
           Possui expertise em projetos que envolvem as mais variadas soluções, com níveis elevados de integração e disponibilidade.
         </p><br/>
         <v-img
+          transition="slide-y-transition"
           src="../assets/peter.svg"
           class="float-image"
           max-width="550"
@@ -45,6 +47,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+
 .app-color {
   background-color: #424242;
   width: 100vw;
@@ -84,6 +87,6 @@ export default {
   margin-left: 10%;
 }
 
-</style>>
+</style>
 
 
